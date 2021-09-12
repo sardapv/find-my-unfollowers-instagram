@@ -57,30 +57,8 @@ export default {
     },
   },
   mounted: async function () {
-    let followers = [
-      // {
-      //   username: "pranav",
-      //   full_name: "Pranav Sarda",
-      //   profile_pic_url: "https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg",
-      // },
-      // {
-      //   username: "yash",
-      //   full_name: "Yash Sarda",
-      //   profile_pic_url: "https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg",
-      // },
-      // {
-      //   username: "vinod",
-      //   full_name: "Vinod Sarda",
-      //   profile_pic_url: "https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg",
-      // },
-    ];
-    let followings = [
-      // {
-      //   username: "pranav",
-      //   full_name: "Pranav Sarda",
-      //   profile_pic_url: "https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg",
-      // },
-    ];
+    let followers = [];
+    let followings = [];
     /*get graphQLID for further apis*/
     const response = await axios.get(`https://www.instagram.com/${this.id}/?__a=1`);
     const {
@@ -103,7 +81,7 @@ export default {
       let listOfPeople = [];
       const queryHash = mode === 1 ? "c76146de99bb02f6415203be841dd25a" : "d04b0a864b4b54837c0d870b0e77e076";
 
-      /* get the list of followers */
+      /* get the list of followers if mode 1 or find followings */
       while (has_next) {
         let graphqlUserID = graphqlUserId;
 
