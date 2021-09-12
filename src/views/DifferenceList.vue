@@ -147,10 +147,10 @@ export default {
       }
       return listOfPeople;
     },
-    getUnfollowings: function (followers, followings) {
+    getUnfollowers: function (followers, followings) {
       return followers.filter((x) => !followings.some((y) => y.username === x.username));
     },
-    getUnfollowers: function (followers, followings) {
+    getUnfollowings: function (followers, followings) {
       return followings.filter((x) => !followers.some((y) => y.username === x.username));
     },
   },
