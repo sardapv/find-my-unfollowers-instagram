@@ -8,7 +8,7 @@
       {{
         !finished
           ? "Hold on 🍺, while we generate the list 😈"
-          : "Oops, seems like its not your username or you have no unfollowers/unfollowings 🧐"
+          : "Oops, seems like its not your username OR you don't have any active logged in session 🧐 OR you have no unfollowers/unfollowings"
       }}
     </div>
     <div v-if="listToDisplay.length !== 0" class="h-10 w-full inline-flex items-center justify-center my-3 px-3">
